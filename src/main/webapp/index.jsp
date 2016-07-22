@@ -28,6 +28,11 @@
 <script>
     (function  ($) {
 
+
+        function isIntValue(n){
+            return $.isNumeric(n) && parseInt(n, 10) > 0;
+        };
+
         $(this).on('find-product', function (evt) {
 
             var id = $('#find-product-id-input').val();
@@ -73,9 +78,6 @@
                 }
             });
 
-            function isIntValue(n){
-                return $.isNumeric(n) && parseInt(n, 10) > 0;
-            }
 
         });
     })(jQuery);
